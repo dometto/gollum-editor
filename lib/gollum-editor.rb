@@ -24,8 +24,8 @@ module Gollum
 	  		::File.join(self.assets_path, 'js')
 	  	end
 
-	    def self.html(replace = {}, js_path = 'javascript', css_path = 'css')
-	      options = replace.merge({:css => css_path, :javascript => js_path})
+	    def self.html(replace = {}, js_path = 'javascript', css = {:css_path => = 'css', :editor_css => 'editor.css', :dialog_css => 'dialog.css', :highlight_css => 'highlightjs-github.css'})
+	      options = replace.merge(css)[:js_path] = js_path
 	  	  Mustache.render(::File.read(::File.join(self.path, 'editor.mustache')), options)
 	  	end
     end
