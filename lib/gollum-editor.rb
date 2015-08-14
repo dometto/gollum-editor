@@ -27,21 +27,20 @@ module Gollum
         ::File.expand_path("..", __FILE__)
       end
 
-      def self.assets_path
+      def self.assets_file_path
         ::File.join(self.path, 'assets')
       end
 
       def self.css_path
-        ::File.join(self.assets_path, 'css')
+        ::File.join(self.assets_file_path, 'css')
       end
 
       def self.js_path
-        ::File.join(self.assets_path, 'js')
+        ::File.join(self.assets_file_path, 'js')
       end
 
       def self.html(replace = {}, options = {})
-       options = DEFAULT_OPTS if options.empty?
-       Mustache.render(::File.read(::File.join(self.path, 'editor.mustache')), replace.merge(options))
+       Mustache.render(::File.read(::File.join(self.path, 'editor.mustache')), DEFAULT_OPTS.merge(options).merge(replace))
       end
     end
 
