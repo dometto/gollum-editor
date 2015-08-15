@@ -21,7 +21,15 @@ module Gollum
     end
 
     class Default
-      DEFAULT_OPTS = {:js_path => 'javascript', :css_path => 'css', :editor_css => 'editor.css', :dialog_css => 'dialog.css', :highlight_css => 'highlightjs-github.css'}
+      DEFAULT_OPTS = {
+      	:require_assets => true,
+      	:js_path => 'javascript',
+      	:init_script => 'editor.init.js',
+      	:css_path => 'css',
+      	:editor_css => 'editor.css',
+      	:dialog_css => 'dialog.css',
+      	:highlight_css => 'highlightjs-github.css'
+      }
 
       def self.path
         ::File.expand_path("..", __FILE__)

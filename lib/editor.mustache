@@ -72,13 +72,19 @@
       Uploading file ...
     </div>
 
+  <span class="jaws"><br></span>
+  <a id="gollum-editor-preview" class="minibutton" title="Preview this Page">Live Preview</a>
+
+{{#require_assets}}
 {{#editor_css}}<link rel="stylesheet" type="text/css" href="{{base_url}}/{{css_path}}/{{editor_css}}" media="all">{{/editor_css}}
 {{#highlight_css}}<link rel="stylesheet" type="text/css" href="{{base_url}}/{{css_path}}/{{highlight_css}}" media="all">{{/highlight_css}}
 {{#dialog_css}}<link rel="stylesheet" type="text/css" href="{{base_url}}/{{css_path}}/{{dialog_css}}" media="all">{{/dialog_css}}
 <link rel="stylesheet" type="text/css" href="{{base_url}}/{{css_path}}/jquery.sidr.light.css" media="all">
 
 <script type="text/javascript" src="{{base_url}}/{{js_path}}/editor/ace/ace.js"></script>
+{{#init_script}}<script type="text/javascript" src="{{base_url}}/{{js_path}}/{{init_script}}"></script>{{/init_script}}
 <script type="text/javascript" src="{{base_url}}/{{js_path}}/editor/gollum.format_selector.js"></script>
 <script type="text/javascript" src="{{base_url}}/{{js_path}}/editor/gollum.editor.js"></script>
 <script type="text/javascript" src="{{base_url}}/{{js_path}}/editor/gollum.preview.js"></script>
 <script type="text/javascript" src="{{base_url}}/{{js_path}}/jquery.sidr.js"></script>
+{{/require_assets}}

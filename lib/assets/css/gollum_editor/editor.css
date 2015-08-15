@@ -176,7 +176,7 @@ a {
 }
 
 #gollum-editor #gollum-editor-function-bar a span {
-  background-image: url(../images/icon-sprite.png);
+  background-image: url(icon-sprite.png);
   background-repeat: no-repeat;
   display: block;
   height: 32px;
