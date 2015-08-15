@@ -7,7 +7,10 @@ module Gollum
     end
 
     def self.asset_paths
-    	assets = {'/css/' => [Gollum::Editor::Default.css_path], '/javascript' => [Gollum::Editor::Default.js_path]}
+    	assets = {
+        '/css/' => [Gollum::Editor::Default.css_path],
+        '/javascript' => [Gollum::Editor::Default.js_path]
+      }
     	active_editor_class = self.active_editor
     	unless active_editor_class == Gollum::Editor::Default
     		assets['/css/'] << active_editor_class.css_path
@@ -40,11 +43,11 @@ module Gollum
       end
 
       def self.css_path
-        ::File.join(self.assets_file_path, 'css')
+        ::File.join(self.assets_file_path, 'css', 'gollum_editor')
       end
 
       def self.js_path
-        ::File.join(self.assets_file_path, 'js')
+        ::File.join(self.assets_file_path, 'js', 'gollum_editor')
       end
 
       def self.html(replace = {}, options = {})
