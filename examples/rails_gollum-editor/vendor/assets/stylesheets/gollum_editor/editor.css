@@ -485,7 +485,7 @@ a#function-help:hover span { background-position: -402px -25px; }
 
 #gollum-editor .collapsed a span,
 #gollum-editor .expanded a span {
-  background-image: url(../images/icon-sprite.png);
+  background-image: url(icon-sprite.png);
   background-position: -351px -1px;
   background-repeat: no-repeat;
   display: block;
